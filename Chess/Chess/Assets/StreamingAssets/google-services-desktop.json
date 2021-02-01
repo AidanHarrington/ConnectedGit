@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "117543152448",
+    "firebase_url": "https://aidanharringtonunity.firebaseio.com",
+    "project_id": "aidanharringtonunity",
+    "storage_bucket": "aidanharringtonunity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117543152448:android:cc39c25a8ed2327508a8a5",
+        "android_client_info": {
+          "package_name": "com.mcast.AidanHarringtonUnity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117543152448-05a1ej8hn7s0jpv5d9ajk6jl8fgkagbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv6d771M72VD9QD9_qlZfkTUX-pdBqjl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117543152448-05a1ej8hn7s0jpv5d9ajk6jl8fgkagbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
