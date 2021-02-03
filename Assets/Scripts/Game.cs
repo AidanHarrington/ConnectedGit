@@ -22,8 +22,8 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p1CurrentTime = 120f;
-        p2CurrentTime = 120f;
+        p1CurrentTime = 320f;
+        p2CurrentTime = 320f;
         playerWhite = new GameObject[]
         {
             Create ("whiteRook", 0,0), Create ("whiteKnight", 1,0), Create ("whiteBishop", 2,0), Create ("whiteQueen", 3,0),
@@ -138,8 +138,8 @@ public class Game : MonoBehaviour
             GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().enabled = true;
             GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text = "white is the winner";        
         }
-        p1Time.text = p1CurrentTime.ToString("0");
-        p2Time.text = p2CurrentTime.ToString("0");
+        p1Time.text = "Time: " + p1CurrentTime.ToString("0");
+        p2Time.text = "Time: " + p2CurrentTime.ToString("0");
     }
 
     public void Winner (string playerWinner)
