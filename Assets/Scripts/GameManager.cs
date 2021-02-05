@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Button robot, traditional;
     public Slider progress;
     public static float counter = 0f;
-
+    public GameObject loadingScreen;
 
     string path = "https://aidanharringtonunity.firebaseio.com/";
 
@@ -25,23 +25,11 @@ public class GameManager : MonoBehaviour
         db = Camera.main.GetComponent<firebaseScript>();
     }
 
-    void Awake()
-    {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("MainCamera");
-
-        if (objs.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     // Update is called once per frame
     void Update()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "GameMenu")
+        if (scene.name == "Menu")
         {
             try
             {
@@ -56,6 +44,8 @@ public class GameManager : MonoBehaviour
                     robot.GetComponent<Button>().interactable = true;
                     traditional.GetComponent<Button>().interactable = true;
                 }
+
+
             }
             catch (Exception e)
             {
@@ -65,7 +55,15 @@ public class GameManager : MonoBehaviour
         }
         if (scene.name == "Game")
         {
+            loadingScreen = GameObject.Find("loading");
             progress = FindObjectOfType<Slider>();
+            
+            //bool isLoaded = false;
+
+            //if (isLoaded)
+            //{
+            //    progress.value = 0f;
+            //}
 
             counter -= Time.deltaTime;
 
@@ -73,13 +71,17 @@ public class GameManager : MonoBehaviour
             {
                 try
                 {
-                    if (progress.value < 5)
+                    if (progress.value < 1)
                     {
                         progress.value += 0.2f * Time.deltaTime;
+                        progress.GetComponent<Slider>().interactable = false;
                     }
                     if (progress.value == progress.maxValue)
                     {
                         progress.gameObject.SetActive(false);
+                        loadingScreen.SetActive(false);
+                        Game.currentPlayer = "white";
+                        //isLoaded = true;
                     }
                 }
                 catch (Exception e)

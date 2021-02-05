@@ -163,12 +163,6 @@ public class firebaseScript : MonoBehaviour
               //  state.TotalByteCount
               //));
               
-              //if(name == "whitePawn")
-              //{
-              //    gm.progress.maxValue = state.TotalByteCount;
-              //    gm.progress.value = state.BytesTransferred;
-              //}
-
           }), CancellationToken.None);
 
         task.ContinueWith(resultTask => {

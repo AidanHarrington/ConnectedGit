@@ -11,7 +11,7 @@ public class Game : MonoBehaviour
     private GameObject[] playerBlack = new GameObject[16];
     private GameObject[] playerWhite = new GameObject[16];
 
-    private string currentPlayer = "white";
+    public static string currentPlayer;
     public bool gameOver = false;
 
     public float p1CurrentTime, p2CurrentTime;
@@ -22,8 +22,9 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p1CurrentTime = 320f;
-        p2CurrentTime = 320f;
+        p1CurrentTime = 300f;
+        p2CurrentTime = 300f;
+
         playerWhite = new GameObject[]
         {
             Create ("whiteRook", 0,0), Create ("whiteKnight", 1,0), Create ("whiteBishop", 2,0), Create ("whiteQueen", 3,0),
@@ -46,6 +47,7 @@ public class Game : MonoBehaviour
             setPosition(playerWhite[i]);
         }
     }
+
     public GameObject Create(string name, int x, int y)
     {
         GameObject obj = Instantiate(chessPiece, new Vector3(0, 0, -1), Quaternion.identity);
@@ -57,6 +59,7 @@ public class Game : MonoBehaviour
         cm.Activate();
         return obj;
     }
+
     public void setPosition(GameObject obj)
     {
         ChessMan cm = obj.GetComponent<ChessMan>();
@@ -151,22 +154,24 @@ public class Game : MonoBehaviour
 
     IEnumerator LoadMainMenu()
     {
-        //GM.nickname.text = "";
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene("Menu");
+        p1CurrentTime = 300f;
+        p2CurrentTime = 300f;
+        currentPlayer = "";
     }
 
     public void Surrender1()
     {
         gameOver = true;
         GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().enabled = true;
-        GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text ="white is the winner";
+        GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text ="White is the winner";
     }
 
     public void Surrender2()
     {
         gameOver = true;
         GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().enabled = true;
-        GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text = "black is the winner";
+        GameObject.FindGameObjectWithTag("WinnerText").GetComponent<Text>().text = "Black is the winner";
     }
 }

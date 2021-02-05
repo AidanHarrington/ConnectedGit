@@ -12,9 +12,6 @@ public class ChessMan : MonoBehaviour
 
     private string player;
 
-    public Sprite blackQueen, blackKnight, blackBishop, blackKing, blackRook, blackPawn;
-    public Sprite whiteQueen, whiteKnight, whiteBishop, whiteKing, whiteRook, whitePawn;
-
     public void Activate()
     {
         controller = GameObject.FindGameObjectWithTag("GameController");
@@ -24,73 +21,61 @@ public class ChessMan : MonoBehaviour
         {
             case "blackQueen":
                 this.gameObject.tag = "blackQueen";
-                this.GetComponent<SpriteRenderer>().sprite = blackQueen;
                 player = "black";
                 break;
 
             case "blackKnight":
                 this.gameObject.tag = "blackKnight";
-                this.GetComponent<SpriteRenderer>().sprite = blackKnight;
                 player = "black";
                 break;
 
             case "blackBishop":
                 this.gameObject.tag = "blackBishop";
-                this.GetComponent<SpriteRenderer>().sprite = blackBishop;
                 player = "black";
                 break;
 
             case "blackKing":
                 this.gameObject.tag = "blackKing";
-                this.GetComponent<SpriteRenderer>().sprite = blackKing;
                 player = "black";
                 break;
 
             case "blackRook":
                 this.gameObject.tag = "blackRook";
-                this.GetComponent<SpriteRenderer>().sprite = blackRook;
                 player = "black";
                 break;
 
             case "blackPawn":
                 this.gameObject.tag = "blackPawn";
-                this.GetComponent<SpriteRenderer>().sprite = blackPawn;
                 player = "black";
                 break;
 
             case "whiteQueen":
                 this.gameObject.tag = "whiteQueen";
-                this.GetComponent<SpriteRenderer>().sprite = whiteQueen;
                 player = "white";
                 break;
 
             case "whiteKnight":
                 this.gameObject.tag = "whiteKnight";
-                this.GetComponent<SpriteRenderer>().sprite = whiteKnight;
                 player = "white";
                 break;
 
             case "whiteBishop":
                 this.gameObject.tag = "whiteBishop";
-                this.GetComponent<SpriteRenderer>().sprite = whiteBishop;
                 player = "white";
                 break;
 
             case "whiteKing":
                 this.gameObject.tag = "whiteKing";
-                this.GetComponent<SpriteRenderer>().sprite = whiteKing;
                 player = "white";
                 break;
 
             case "whiteRook":
                 this.gameObject.tag = "whiteRook";
-                this.GetComponent<SpriteRenderer>().sprite = whiteRook;
                 player = "white";
                 break;
 
             case "whitePawn":
                 this.gameObject.tag = "whitePawn";
-                this.GetComponent<SpriteRenderer>().sprite = whitePawn;
                 player = "white";
                 break;
         }

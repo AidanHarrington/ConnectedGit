@@ -28,7 +28,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919215040513679220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,18 +104,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   movePlate: {fileID: 5214658792131782732, guid: c049c1a8e00365a458146c414c7ee36d, type: 3}
-  blackQueen: {fileID: 21300000, guid: c0d8fd50c6589434fa34299989bf27df, type: 3}
-  blackKnight: {fileID: 21300000, guid: 2f1ea6a2e03b98c45805f1ba58954ab2, type: 3}
-  blackBishop: {fileID: 21300000, guid: 69d9d1ec339d57b44af269ae95cbcdac, type: 3}
-  blackKing: {fileID: 21300000, guid: 9b0a2bb38e8106a45aab3716092e8b04, type: 3}
-  blackRook: {fileID: 21300000, guid: 50f563ee4eb96e240aa649ca385f10a7, type: 3}
-  blackPawn: {fileID: 21300000, guid: 9d703f484228c42479d77d7b86a37697, type: 3}
-  whiteQueen: {fileID: 21300000, guid: 0c28c51baa499b14080e8ed8133a249f, type: 3}
-  whiteKnight: {fileID: 21300000, guid: 315a11223508362418c64c4ad73d9ae9, type: 3}
-  whiteBishop: {fileID: 21300000, guid: 42b2acd2520906c409efe1a9bc54d167, type: 3}
-  whiteKing: {fileID: 21300000, guid: 58d3e88c223be5e44a5f5eff55344383, type: 3}
-  whiteRook: {fileID: 21300000, guid: 6997a2d0b7adcaa4eab695f2f0472215, type: 3}
-  whitePawn: {fileID: 21300000, guid: 61020b5f767bae941838f9936bd07043, type: 3}
 --- !u!61 &-2582556532101136624
 BoxCollider2D:
   m_ObjectHideFlags: 0
